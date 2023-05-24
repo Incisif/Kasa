@@ -1,4 +1,4 @@
-import bannerImg from '../../assets/banner.png'
+
 import styled from 'styled-components'
 
 const BannerContainer = styled.div`
@@ -39,12 +39,12 @@ const BannerText = styled.p`
   margin: 0 4rem 0 0;
 `;
 
-function Banner() {
+function Banner({imageSrc, text}) {
   return (
     <BannerContainer>
-      <BannerImg src={bannerImg} alt="logo" />
+      <BannerImg src={imageSrc} alt="Bannière" />
       <BannerOverlay />
-      <BannerText>Chez vous, partout et ailleurs</BannerText>
+      <BannerText>{text}</BannerText>
     </BannerContainer>
   );
 }

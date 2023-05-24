@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import Banner from '../../components/Banner'
 import Card from '../../components/Card'
+import banner1 from '../../assets/banner1.png'
+
 
 const data = require('../../data/location.json')
 
@@ -17,7 +19,7 @@ const CardContainer = styled.div`
 
 function Home() {
   return <HomeWrapper>
-    <Banner />
+    <Banner imageSrc={banner1} text={'Chez vous, partout ailleurs'} />
     <CardContainer>
     {data.map((item)=> <Card key={item.id} title={item.title} picture={item.cover} />)}
     </CardContainer>

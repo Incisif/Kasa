@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import Collapse from '../../components/Collapse'
+import banner2 from '../../assets/banner2.png'
+import Banner from '../../components/Banner'
 
 const AboutWrapper = styled.div`
   height: 100vh;
@@ -10,6 +12,7 @@ const AboutWrapper = styled.div`
 function About() {
   return (
     <AboutWrapper>
+      <Banner imageSrc={banner2} />
       <Collapse title={`Fiabilité`}>
         Les annonces postées sur kasa garantissent une fiabilité totale. Les
         photos sont conformes aux logements, et toutes les informations sont

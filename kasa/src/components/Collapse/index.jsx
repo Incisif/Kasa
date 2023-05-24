@@ -41,7 +41,7 @@ const AdditionalContent = styled.div`
   font-size: 12px;
   transform-origin: top;
   transform: translateY(${({ collapsed }) => (collapsed ? '-100%' : '0')});
-  transition: transform 0.3s ease-in-out;
+  transition: transform 2s ease-in-out;
 `
 
 function Collapse({ title, children }) {
