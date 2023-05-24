@@ -1,10 +1,12 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components'
 
 const ResetStyles = createGlobalStyle`
   
 html {
     box-sizing: border-box;
     font-size: 16px;
+    height: 100%;
+    
   }
   
   *, *:before, *:after {
@@ -23,6 +25,6 @@ html {
   a {
     text-decoration: none;
   }
-`;
+`
 
-export default ResetStyles;
+export default ResetStyles

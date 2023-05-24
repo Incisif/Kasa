@@ -7,6 +7,7 @@ const BannerContainer = styled.div`
   height: 111px;
   border-radius: 10px;
   overflow: hidden;
+  margin-bottom: 22px;
 `;
 
 const BannerImg = styled.img`

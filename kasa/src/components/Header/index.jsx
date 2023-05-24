@@ -1,9 +1,8 @@
-
-import logo from '../../assets/LOGO.png'
+import redLogo from '../../assets/redLogo.png'
 import styled from 'styled-components'
-import  StyledLink  from '../../utils/style/Atoms'
+import StyledLink from '../../utils/style/Atoms'
 
-const NavContainer = styled.nav`
+const HeaderContainer = styled.header`
   display: flex;
   height: 83px;
   align-items: center;
@@ -12,18 +11,20 @@ const NavContainer = styled.nav`
   margin: 0 20px 0 20px;
 `
 const LogoImg = styled.img`
-width: 145px;
+  width: 145px;
+  height: 40px;
+
 `
 
-function Header() {
+function Header({ logoColor }) {
   return (
-    <NavContainer>
-      <LogoImg src={logo} alt="logo" />
+    <HeaderContainer>
+      <LogoImg src={redLogo} alt="logo" />
       <div>
         <StyledLink to="/">Accueil</StyledLink>
         <StyledLink to="/about">A propos</StyledLink>
       </div>
-    </NavContainer>
+    </HeaderContainer>
   )
 }
 
