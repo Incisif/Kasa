@@ -17,7 +17,9 @@ const ClickableBar = styled.div`
 `
 const Arrow = styled.span`
   color: white;
-`
+  transform: rotate(${({ arrowRotation }) => arrowRotation}deg);
+  transition: transform 0.2s ease-in-out;
+`;
 
 const CollapseTitle = styled.h2`
   font-family: 'Montserrat';
@@ -37,22 +39,29 @@ const AdditionalContent = styled.div`
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
+  transform-origin: top;
+  transform: translateY(${({ collapsed }) => (collapsed ? '-100%' : '0')});
+  transition: transform 0.3s ease-in-out;
 `
 
 function Collapse({ title, children }) {
   const [collapsed, setCollapsed] = useState(true)
+  const [arrowRotation, setArrowRotation] = useState(0);
+
   const toggleCollapse = () => {
-    setCollapsed(!collapsed)
-  }
+    setCollapsed(!collapsed);
+    setArrowRotation(arrowRotation === 0 ? 180 : 0);
+  };
+  
   return (
     <CollapseWrapper>
       <ClickableBar onClick={toggleCollapse}>
         <CollapseTitle>{title}</CollapseTitle>
-        <Arrow>
-          <i class="fa-solid fa-chevron-up"></i>
+        <Arrow arrowRotation={arrowRotation}>
+          <i className="fa-solid fa-chevron-up"></i>
         </Arrow>
       </ClickableBar>
-      {!collapsed && <AdditionalContent>{children}</AdditionalContent>}
+      {!collapsed && <AdditionalContent collapsed={collapsed}>{children}</AdditionalContent>}
     </CollapseWrapper>
   )
 }
