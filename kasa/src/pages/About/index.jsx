@@ -6,13 +6,16 @@ import Banner from '../../components/Banner'
 
 const AboutWrapper = styled.div`
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0 20px;
 `
 
 function About() {
   return (
     <AboutWrapper>
-      <Banner imageSrc={banner2} />
+      <Banner imageSrc={banner2} height={"336px"} />
       <Collapse title={`Fiabilité`}>
         Les annonces postées sur kasa garantissent une fiabilité totale. Les
         photos sont conformes aux logements, et toutes les informations sont

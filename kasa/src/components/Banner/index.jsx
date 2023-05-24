@@ -7,7 +7,8 @@ const BannerContainer = styled.div`
   height: 111px;
   border-radius: 10px;
   overflow: hidden;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
+  max-width: 1240px;
 `;
 
 const BannerImg = styled.img`
@@ -39,10 +40,10 @@ const BannerText = styled.p`
   margin: 0 4rem 0 0;
 `;
 
-function Banner({imageSrc, text}) {
+function Banner({imageSrc, text, height }) {
   return (
-    <BannerContainer>
-      <BannerImg src={imageSrc} alt="Bannière" />
+    <BannerContainer style={{ height: height }}>
+      <BannerImg src={imageSrc} alt="Bannière"  />
       <BannerOverlay />
       <BannerText>{text}</BannerText>
     </BannerContainer>

@@ -16,7 +16,7 @@ const LogoImg = styled.img`
 
 `
 
-function Header({ logoColor }) {
+function Header() {
   return (
     <HeaderContainer>
       <LogoImg src={redLogo} alt="logo" />
