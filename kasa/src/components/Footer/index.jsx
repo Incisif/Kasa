@@ -8,6 +8,7 @@ const FooterContainer = styled.footer`
   align-items: center;
   height: 225px;
   background-color: black;
+  margin-top: 2rem;
   
 `
 const LogoImg = styled.img`
