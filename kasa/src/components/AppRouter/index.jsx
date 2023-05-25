@@ -6,6 +6,7 @@ import About from '../../pages/About';
 import NotFound from '../../pages/NotFound';
 import Footer from '../Footer';
 import ResetStyles from '../../utils/style/ResetStyles';
+import CardDetails from '../../pages/CardDetails';
 
 function AppRouter() {
   return (
@@ -16,6 +17,7 @@ function AppRouter() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<NotFound />} />
+       <Route path="/card/:id" element={<CardDetails />} />
       </Routes>
       <Footer />
     </Router>

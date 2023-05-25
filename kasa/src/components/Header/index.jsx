@@ -9,21 +9,22 @@ const HeaderContainer = styled.header`
   justify-content: space-between;
   flexdirection: row;
   margin: 0 20px 0 20px;
+  max-width: 1240px;
 `
 const LogoImg = styled.img`
   width: 145px;
   height: 40px;
-
 `
+const NavBar = styled.nav``
 
 function Header() {
   return (
     <HeaderContainer>
       <LogoImg src={redLogo} alt="logo" />
-      <div>
+      <NavBar>
         <StyledLink to="/">Accueil</StyledLink>
         <StyledLink to="/about">A propos</StyledLink>
-      </div>
+      </NavBar>
     </HeaderContainer>
   )
 }

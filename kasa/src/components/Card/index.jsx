@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom';
 
 const CardWrapper = styled.div`
   position: relative;
@@ -28,14 +29,16 @@ const TitleWrapper = styled.div`
   left: 20px;
   width: 60%;
 `
-function Card({ title, picture, id }) {
-  console.log(title)
+function Card({ title, cover, id }) {
+  console.log(id)
   return (
     <CardWrapper key={id}>
-      <CardImage src={picture} alt="Propriétés" />
-      <TitleWrapper>
-        <CardTitle>{title}</CardTitle>
-      </TitleWrapper>
+      <Link to={`/card/${id}`}>
+        <CardImage src={cover} alt="Propriétés" />
+        <TitleWrapper>
+          <CardTitle>{title}</CardTitle>
+        </TitleWrapper>
+      </Link>
     </CardWrapper>
   )
 }
