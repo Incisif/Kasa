@@ -30,7 +30,7 @@ const TitleWrapper = styled.div`
   width: 60%;
 `
 function Card({ title, cover, id }) {
-  console.log(id)
+  
   return (
     <CardWrapper key={id}>
       <Link to={`/card/${id}`}>

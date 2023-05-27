@@ -1,8 +1,5 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { useParams } from 'react-router-dom'
-
-const data = require('../../data/location.json')
 
 const CarouselWrapper = styled.div`
   position: relative;
@@ -50,9 +47,9 @@ const SlideNumberWrapper = styled.div`
   color: #ffffff;
 `
 
-function Carousel() {
-  const { id } = useParams()
-  const currentObject = data.find((item) => item.id === id)
+function Carousel({ data, id, currentObject }) {
+  
+  
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const handleNextSlide = () => {

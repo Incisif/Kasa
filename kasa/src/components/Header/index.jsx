@@ -7,8 +7,8 @@ const HeaderContainer = styled.header`
   height: 83px;
   align-items: center;
   justify-content: space-between;
-  flexdirection: row;
-  margin: 0 20px 0 20px;
+  width: 100%;
+  margin: 0 auto 0 auto;
   max-width: 1240px;
 `
 const LogoImg = styled.img`
