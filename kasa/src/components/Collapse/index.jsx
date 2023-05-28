@@ -31,12 +31,10 @@ const CollapseTitle = styled.h2`
   color: white;
 `
 const AdditionalContent = styled.div`
-  height: 100px;
   background-color: ${colors.secondaryColor};
   color: ${colors.primaryColor};
-  
   border-radius: 5px;
-  padding: 20px 11px 50px 11px;
+  padding: 20px 11px 15px 11px;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;

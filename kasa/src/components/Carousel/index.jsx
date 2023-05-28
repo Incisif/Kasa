@@ -39,7 +39,7 @@ const RightArrow = styled.div`
 const SlideNumberWrapper = styled.div`
   position: absolute;
   bottom: 24px;
-  right: 50%;
+  left: 50%;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
