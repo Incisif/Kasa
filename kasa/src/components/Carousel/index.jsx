@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import { device } from '../../utils/style/devices'
+import PropTypes from 'prop-types'
 
 const CarouselWrapper = styled.div`
   position: relative;
@@ -8,6 +10,12 @@ const CarouselWrapper = styled.div`
   max-width: 1240px;
   border-radius: 10px;
   overflow: hidden;
+  @media ${device.tablet} {
+    height: 335px;
+  }
+  @media ${device.laptop} {
+    height: 415px;
+  }
 `
 
 const CarouselImg = styled.img`
@@ -24,6 +32,12 @@ const LeftArrow = styled.div`
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
+  @media ${device.tablet} {
+    font-size: 2.5rem;
+  }
+  @media ${device.laptop} {
+    font-size: 4rem;
+  }
 `
 
 const RightArrow = styled.div`
@@ -34,6 +48,12 @@ const RightArrow = styled.div`
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
+  @media ${device.tablet} {
+    font-size: 2.5rem;
+  }
+  @media ${device.laptop} {
+    font-size: 4rem;
+  }
 `
 
 const SlideNumberWrapper = styled.div`
@@ -45,11 +65,15 @@ const SlideNumberWrapper = styled.div`
   font-weight: 500;
   font-size: 18px;
   color: #ffffff;
+  display: none;
+  @media ${device.mobileL} {
+    display: block;
+  }
 `
 
-function Carousel({ data, id, currentObject }) {
-  
-  
+function Carousel({ currentObject }) {
+  console.log(currentObject);
+
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const handleNextSlide = () => {
@@ -82,6 +106,9 @@ function Carousel({ data, id, currentObject }) {
       </SlideNumberWrapper>
     </CarouselWrapper>
   )
+}
+Carousel.propTypes = {
+  currentObject: PropTypes.object.isRequired
 }
 
 export default Carousel

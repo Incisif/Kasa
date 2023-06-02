@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import { device } from '../../utils/style/devices'
+import PropTypes from 'prop-types'
 
 const BannerContainer = styled.div`
   position: relative;
@@ -8,14 +10,17 @@ const BannerContainer = styled.div`
   overflow: hidden;
   margin-bottom: 20px;
   max-width: 1240px;
-`;
+  @media ${device.tablet} {
+    height: 223px;
+  }
+`
 
 const BannerImg = styled.img`
   object-fit: cover;
   width: 100%;
   height: 100%;
   transform: scale(2);
-`;
+`
 
 const BannerOverlay = styled.div`
   position: absolute;
@@ -23,8 +28,8 @@ const BannerOverlay = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2); 
-`;
+  background-color: rgba(0, 0, 0, 0.2);
+`
 
 const BannerText = styled.p`
   position: absolute;
@@ -37,16 +42,21 @@ const BannerText = styled.p`
   font-size: 24px;
   color: #ffffff;
   margin: 0 4rem 0 0;
-`;
+`
 
-function Banner({imageSrc, text, height }) {
+function Banner({ imageSrc, text, height }) {
   return (
     <BannerContainer style={{ height: height }}>
-      <BannerImg src={imageSrc} alt="Bannière"  />
+      <BannerImg src={imageSrc} alt="Bannière" />
       <BannerOverlay />
       <BannerText>{text}</BannerText>
     </BannerContainer>
-  );
+  )
+}
+Banner.propTypes = {
+  imageSrc: PropTypes.string.isRequired,
+  text: PropTypes.string,
+  height: PropTypes.string
 }
 
-export default Banner;
+export default Banner

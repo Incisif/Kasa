@@ -6,9 +6,7 @@ html {
     box-sizing: border-box;
     font-size: 16px;
     height: 100%;
-    
-    
-    
+
   }
   
   *, *:before, *:after {

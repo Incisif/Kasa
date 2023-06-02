@@ -1,13 +1,18 @@
 import styled from 'styled-components'
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
+import { device } from '../../utils/style/devices'
+import PropTypes from 'prop-types'
 
 const CardWrapper = styled.div`
   position: relative;
-  max-width: 340px;
-  width: 335px;
   height: 255px;
   border-radius: 10px;
   overflow: hidden;
+  width: 100%;
+  @media ${device.tablet} {
+    height: 340px;
+    width: 340px;
+  }
 `
 const CardImage = styled.img`
   object-fit: cover;
@@ -30,7 +35,6 @@ const TitleWrapper = styled.div`
   width: 60%;
 `
 function Card({ title, cover, id }) {
-  
   return (
     <CardWrapper key={id}>
       <Link to={`/card/${id}`}>
@@ -41,6 +45,11 @@ function Card({ title, cover, id }) {
       </Link>
     </CardWrapper>
   )
+}
+Card.propTypes = {
+  title: PropTypes.string.isRequired,
+  cover: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired
 }
 
 export default Card

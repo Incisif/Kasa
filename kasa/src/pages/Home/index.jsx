@@ -3,13 +3,15 @@ import styled from 'styled-components'
 import Banner from '../../components/Banner'
 import Card from '../../components/Card'
 import banner1 from '../../assets/banner1.png'
+import { device } from '../../utils/style/devices'
 
 const HomeWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1240px
+  max-width: 1240px;
   margin: 0 auto 0 auto;
+  
 `
 const CardContainer = styled.div`
   display: flex;
@@ -19,6 +21,13 @@ const CardContainer = styled.div`
   margin-bottom: 20px;
   max-width: 1240px;
   width: 100%;
+  @media ${device.tablet} {
+    background: #f7f7f7;
+    border-radius: 25px;
+    padding: 35px 0;
+    row-gap: 35px;
+    column-gap: 3.5%;
+  }
 `
 
 function Home() {
@@ -27,15 +36,15 @@ function Home() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch('/data/location.json');
-        const json = await response.json();
-        setData(json);
+        const response = await fetch('/data/location.json')
+        const json = await response.json()
+        setData(json)
       } catch (error) {
-        console.log(error);
+        console.log(error)
       }
     }
-    fetchData();
-  }, []);
+    fetchData()
+  }, [])
 
   return (
     <HomeWrapper>

@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 import whiteLogo from '../../assets/whiteLogo.png'
+import { device } from '../../utils/style/devices'
+
 
 const FooterContainer = styled.footer`
   display: flex;
@@ -22,7 +24,14 @@ font-family: 'Montserrat';
 font-style: normal;
 font-weight: 500;
 font-size: 12px;
-margin-top: 2rem;  `
+margin-top: 2rem;
+@media ${device.tablet} {
+  font-size: 16px;
+}
+@media ${device.laptop} {
+  font-size: 24px;
+}
+`
 
 function Footer() {
   return (

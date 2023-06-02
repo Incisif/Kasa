@@ -9,13 +9,21 @@ const AboutWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 1240px;
+  margin: 0 auto;
+  width: 100%;
 
+`
+const CollapseWrapper = styled.div`
+width: 100%;
+max-width: 1023px;
 `
 
 function About() {
   return (
     <AboutWrapper>
       <Banner imageSrc={banner2} height={"223px"} />
+      <CollapseWrapper>
       <Collapse title={`Fiabilité`}>
         Les annonces postées sur kasa garantissent une fiabilité totale. Les
         photos sont conformes aux logements, et toutes les informations sont
@@ -39,6 +47,8 @@ function About() {
         bien respectés. Nous organisons également des ateliers de
         sensibilisation à la sécurité domestique pour nos hôtes.
       </Collapse>
+      
+      </CollapseWrapper>
     </AboutWrapper>
   )
 }

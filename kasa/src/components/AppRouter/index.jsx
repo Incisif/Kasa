@@ -8,12 +8,16 @@ import Footer from '../Footer'
 import ResetStyles from '../../utils/style/ResetStyles'
 import CardDetails from '../../pages/CardDetails'
 import styled from 'styled-components'
+import { device } from '../../utils/style/devices'
 
 const AppContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0 20px;
+  @media ${device.tablet} {
+    margin: 0 30px;
+  }
 `
 
 function AppRouter() {

@@ -2,15 +2,15 @@ import React from 'react'
 import styled from 'styled-components'
 import StyledLink from '../../utils/style/Atoms'
 import colors from '../../utils/style/colors'
+import { device } from '../../utils/style/devices'
 
 const NotFoundWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0 58px;
   text-align: center;
-  height: 100vh;
+  height: 80vh;
 `
 
 const NotFoundTextContainer = styled.div`
@@ -25,7 +25,12 @@ const NotFound404 = styled.p`
   font-weight: 700;
   font-size: 96px;
   margin:bottom: 11px;
-  
+  @media ${device.tablet} {
+    font-size: 200px;
+  }
+  @media ${device.laptop} {
+    font-size: 263px;
+  }
 `
 const NotFoundText = styled.p`
   color: ${colors.primaryColor};
@@ -34,6 +39,12 @@ const NotFoundText = styled.p`
   font-weight: 500;
   font-size: 18px;
   margin-bottom: 133px;
+  @media ${device.tablet} {
+    font-size: 25px;
+  }
+  @media ${device.laptop} {
+    font-size: 36px;
+  }
 `
 function NotFound() {
   return (
