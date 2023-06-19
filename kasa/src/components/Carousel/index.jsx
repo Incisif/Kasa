@@ -72,13 +72,12 @@ const SlideNumberWrapper = styled.div`
 `
 
 function Carousel({ currentObject }) {
-  console.log(currentObject);
 
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const handleNextSlide = () => {
-    setCurrentSlide((prevSlide) =>
-      prevSlide === currentObject.pictures.length - 1 ? 0 : prevSlide + 1
+    setCurrentSlide((nextSlide) =>
+      nextSlide === currentObject.pictures.length - 1 ? 0 : nextSlide + 1
     )
   }
 

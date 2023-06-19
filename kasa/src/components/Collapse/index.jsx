@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 
 const CollapseWrapper = styled.div`
   margin-bottom: 20px;
-  
+
   width: 100%;
 `
 const ClickableBar = styled.div`
@@ -33,7 +33,7 @@ const Arrow = styled.span`
     font-size: 20px;
   }
   @media ${device.laptop} {
-   font-size: 24px;
+    font-size: 24px;
   }
 `
 
@@ -47,7 +47,7 @@ const CollapseTitle = styled.h2`
     font-size: 15px;
   }
   @media ${device.laptop} {
-   font-size: 18px;
+    font-size: 18px;
   }
 `
 const AdditionalContent = styled.div`
@@ -63,12 +63,11 @@ const AdditionalContent = styled.div`
     font-size: 15px;
   }
   @media ${device.laptop} {
-   font-size: 18px;
+    font-size: 18px;
   }
 `
 
 function Collapse({ title, children }) {
-  
   const [collapsed, setCollapsed] = useState(true)
   const [arrowRotation, setArrowRotation] = useState(0)
 
@@ -86,14 +85,15 @@ function Collapse({ title, children }) {
         </Arrow>
       </ClickableBar>
       {!collapsed && (
-        <AdditionalContent collapsed={collapsed ? 'true' : 'false'}>{children}</AdditionalContent>
-
+        <AdditionalContent collapsed={collapsed ? 'true' : 'false'}>
+          {children}
+        </AdditionalContent>
       )}
     </CollapseWrapper>
   )
 }
 Collapse.prototype = {
   title: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 }
 export default Collapse

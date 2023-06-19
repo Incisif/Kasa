@@ -232,7 +232,12 @@ function CardDetails() {
       </PropertyWrapper>
       <CollapseWrapper>
         <Collapse title="Description" children={data.description} />
-        <Collapse title="Equipements" children={data.equipments} />
+        <Collapse
+          title="Equipements"
+          children={data.equipments.map((equipment, index) => (
+            <div key={equipment}>{equipment}</div>
+          ))}
+        />
       </CollapseWrapper>
     </CardDetailsWrapper>
   )
