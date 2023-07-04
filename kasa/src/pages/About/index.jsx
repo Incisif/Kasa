@@ -25,27 +25,27 @@ function About() {
       <Banner imageSrc={banner2} height={"223px"} />
       <CollapseWrapper>
       <Collapse title={`Fiabilité`}>
-        Les annonces postées sur kasa garantissent une fiabilité totale. Les
+        <p>Les annonces postées sur kasa garantissent une fiabilité totale. Les
         photos sont conformes aux logements, et toutes les informations sont
-        régulièrement vérifiées par nos équipes.
+        régulièrement vérifiées par nos équipes.</p>
       </Collapse>
       <Collapse title={`Respect`}>
-        La bienveillance fait partie des valeurs fondatrices de kasa. Tout
+      <p>La bienveillance fait partie des valeurs fondatrices de kasa. Tout
         comportement discriminatoire ou de perturbation du voisinage entraînera
-        une exclusion de notre plateforme.
+        une exclusion de notre plateforme.</p>
       </Collapse>
       <Collapse title={`Service`}>
-        Nos équipes se tiennent à votre disposition pour vous fournir une
+      <p> Nos équipes se tiennent à votre disposition pour vous fournir une
         expérience parfaite. N'hésitez pas à nous contacter si vous avez la
-        moindre question.
+        moindre question.</p>
       </Collapse>
       <Collapse title={`Sécurité`}>
-        La sécurité est la priorité de kasa. Aussi bien pour nos hôtes que pour
+      <p>La sécurité est la priorité de kasa. Aussi bien pour nos hôtes que pour
         les voyageurs, chaque logement correspond aux critères de sécurité
         établis par nos services. En laissant une note aussi bien à l'hôte qu'au
         locataire, cela permet à nos équipes de vérifier que les standards sont
         bien respectés. Nous organisons également des ateliers de
-        sensibilisation à la sécurité domestique pour nos hôtes.
+        sensibilisation à la sécurité domestique pour nos hôtes.</p>
       </Collapse>
       
       </CollapseWrapper>

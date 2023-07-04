@@ -164,6 +164,7 @@ function CardDetails() {
         const response = await fetch('/data/location.json')
         const json = await response.json()
         const currentObject = json.find((item) => item.id === id)
+        console.log(currentObject)
         if (!currentObject) {
           navigate('/NotFound')
         } else {
@@ -173,7 +174,6 @@ function CardDetails() {
         console.log(error)
       }
     }
-
     fetchData()
   }, [id, navigate])
 
